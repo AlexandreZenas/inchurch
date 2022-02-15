@@ -1,393 +1,854 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Avaliação Estágio</title>
-        <!-- MetaTags-->
-   <meta charset="utf-8">
-   <meta name="viewport" content="width=device-width,inital-scale=1.0,maximun-scale=1.0">
-   <meta name="keywords" content="">
-   <!--links-->
-   <link rel="stylesheet" type="text/css" href=".././css/index.css" >
-    </head>
-    <body>
-        <header>
-            <!--Header-->
-            <div class="container">
-                <!--Menu Desktop-->
-                <nav class="nav1">
-                    <ul>
-                        <li class="li1">
-                            <a href="">Página multiuso </a>
-                            <i class="fa fa-sort-down" ></i>
-                        </li>
+@import url('https://pro.fontawesome.com/releases/v5.10.0/css/all.css');
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/*Classes Auxiliares*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Circular Std' ,sans-serif;
+ }
+ body.stop-scrolling{
+	overflow-y: hidden;
+}
+
+ html,body{
+    margin: 0 auto;
+    background-color: #E5E5E5
+    ;
+ }
+ .clear{
+     clear: both;
+ }
+/*Menu Desktop*/
+    header { 
+        height: 136px;
+        width: 100%;
+        left: 0px;
+        top: 0px;
+        border-radius: 0px;
+        background-color: white;
+
+    }
+    /*nav 1*/
+        nav.nav1 {
+            float: right;
+            padding: 58px 156px 58px 0;
+        }
+
+            nav.nav1 li {
+                padding: 0 0 0 48px;
+                display: inline-block;
+                font-weight: lighter;
+                
+            }
+                nav.nav1 li.li1{
+                    font-weight: bold;
+                }
+            nav.nav1 a{
+                color:black;
+                text-decoration: none;
+            }   
+            
+             i{
+                font-size: 22px;
+                font-weight: 900;
+
+
+            }
+/*Menu Mobile*/
+    nav.nav2{
+        display: none;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+        nav.nav2 h2{
+            cursor: pointer;
+        }
+        nav.nav2 ul {
+            height: 100vh;
+            display: none;
+            width: 100%;
+            background-color: rgba(82, 76, 74,1 );
+            position: absolute;
+            left: 0;
+            z-index: 999;
+            text-align: center;
+            overflow-y: auto;
+            margin-bottom: 500px;;
+        
+        }
+        nav.nav2 li {
+
+            border-bottom: 1px solid black;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+        }
+        nav.nav2 li:hover{
+            background-color:#413f3e;
+        }
+        nav.nav2 a {
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        nav.nav2 img{
+            width: 100px;
+        }
+        nav.nav2 i {
+            margin-top: -30px;
+            font-size: 30px;;
+            float: left;
+
+        }
+
+/*sessão do conteúdo*/
+    section.section-conteúdo{
+        width: 80%;
+        height: 100px;
+        margin: 0 auto;
+    }
+        /*conteúdo 01*/
+        section.section-conteúdo div.conteúdo01{
+            width: 100%;
+            margin-top: 116px;
+            text-align: center;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+            /*h2 e h5*/
+                div.conteúdo01 h3 {
+                    font-size: 24px;
+
+                }
+                div.conteúdo01 > h5 {
+                    font-style: Bold;
+                    Font-size: 16px;
+                    Line-height: 16px;
+                    Vertical-align: Center;
+                    color:#1E5BDA ;
+                }
+            /*linha preta*/
+                div.conteúdo01 div.line-text {
+                        margin:0px 55px 0 27px;
+                        width: 70%;
+                        height:17px;
+                        padding: 0px 0 0px 0;
+                        position: relative;
+                        display: inline-block;
+                        color: black;
+                }
+                div.conteúdo01 div.line-text > div{
+                    position: absolute;
+                    margin: 8px 0 0 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background:black;
+                }
+    /*conteúdo 02*/ 
+        section.section-conteúdo  div.conteúdo02{
+            width: 100%;
+            height: 50%;
+            margin: 72px 0 0 0;
+            }
+        /*parte 01*/
+            div.conteúdo02 div.conteúdo-60{
+                float: left;
+                position: relative;
+                width: 65%;
+            }
+            div.conteúdo-60 img{
+                width: 100%;
+            }
+            /*sobreposição*/
+                div.conteúdo-60 div.sobreposição{
+                    position: absolute;
+                    bottom: 22px;
+                    left: 30px;
+
+                }
+                /*"botão"*/
+                    div.conteúdo-60 div.haga5{
+                        height: 32px;
+                        width: 135px;
+                        border: 1px solid white;
+                        border-radius: 80px;
+                    }
+                        div.conteúdo-60 div.haga5:hover{
+                            cursor:pointer;
+                    }
+                    div.conteúdo-60 div.haga5 h5{
+                        color: white;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 7px;
+                    }
+                /*icone e horarios*/
+                    div.conteúdo-60 i.fa-play{
+                        font-size: 40px;
+                        margin-top: 35px;
+                    }
+                    div.conteúdo-60 p.horarios{
+                        margin-top: -31px;
+                        align-items: center;
+                        margin-left: 56px;
+                        color: white;
                         
-                        <li>
-                            <a href="">conteúdo</a>
-                        </li>
-                        <i class="fa fa-sort-down"></i>
-                        <li>
-                            <a href="">ao vivo</a>
-                        </li>
-                        <li>
-                            <a href="">participe</a>
-                        </li>
-                        <i class="fa fa-sort-down"></i>
-                        <li>
-                            <a href="">contribua</a>
-                        </li>
-                        <li>
-                            <a href="">guia</a>
-                        </li>
-                        <i class="fa fa-sort-down"></i>
-                        <li>
-                            <a href="">contato</a>
-                        </li>
-                        <i class="fa fa-sort-down"></i>
-                    </ul><div class="clear"></div>	
-                </nav><div class="clear"></div>
-                <!--Menu Mobile-->
-                <nav class="nav2">
-                    <img src=".././icones/inchurch2x.png">
-                    <h2 id="burger"><i class="fas fa-bars"></i></h2>
+                        }
+            div.conteúdo-60 div.parag{
+                font-size: 20px;
+                font-weight: 700px;
+                line-height: 25,3px;
+                color: white;
+                margin-top: 50px;
+            }
+            
+        /*parte 02*/
+        div.conteúdo02 div.conteúdo-35{
+            height: 100%;
+            width: 35%;
+            float: right;
+            }
+            /*box img 1*/
+                div.conteúdo02 div.conteúdo-35 div.box-img1 {
+                    position: relative;
+                    height: 45%;
+                    width: 100%;
+                    margin-bottom: 5%;
+                    text-align: right;
                     
-                    <ul>
-                        <li class="li1">
-                            <a href="">Página multiuso</a>
-                        </li>
-                        <li>
-                            <a href="">contuúdo</a>
-                        </li>
-                        <li>
-                            <a href="">ao vivo</a>
-                        </li>
-                        <li>
-                            <a href="">participe</a>
-                        </li>
-                        <li>
-                            <a href="">contribua</a>
-                        </li>
-                        <li>
-                            <a href="">guia</a>
-                        </li>
-                        <li>
-                            <a href="">contato</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="clear"></div>
-            </div>
-        </header>
-        <!--section conteúdo-->
-            <section class="section-conteúdo">
-            <!--container-->
-                <div class="container">
-                <!--conteúdo 01-->
-                    <div class="conteúdo01">
-                        <h3>Palavras  </h3>
-                        <div class="line-text line-textS3 "><div></div></div>
-                        <h5> Ver todas as palavras <i class="fa fa-arrow-right"></i></h5>
-                    </div>
-                <!-- conteúdo 02-->
-                    <div class="conteúdo02">
-                        <!--parte direita-->
-                            <div class="conteúdo-60">
-                                <img src=".././icones/imagem/Component14/3.png" alt="">
-                            <!--div de sobreposição-->
-                                <div class="sobreposição">
-                                <!--botão-->
-                                    <div class="haga5">
-                                        <h5>Devocional</h5>
-                                    </div>
-                                <!--icone e horários-->                            
-                                    <i class="fa fa-play" style="color: gray;"></i>
-                                    <p class="horarios">QUA, 2 A 13 NOV • 19:00</p>
-                                <!--parágrafos-->
-                                    <div class="parag">
-                                        <P>Consagração da família evangélica de Deus e Jesus Cristo</P>
-                                        <P>Consagração da família evangélica de Deus e Jesus Cristo</P>
-                                    </div>
-                                </div>
-                            </div>
-                        <!--parte esquerda-->
-                            <div class="conteúdo-35">
-                                <div class="box-img1">
-                                    <img src=".././icones/imagem/Component14/Vector.png" alt="">
-                                <!--div de sobreposição-->
-                                    <div class="sobreposição">
-                                    <!--botão-->
-                                        <div class="haga5">
-                                            <h5>Categoria</h5>
-                                        </div>
-                                    <!--icone e horários-->                            
-                                        <i class="fa fa-play" style="color: gray;"></i>
-                                        <p class="horarios">QUA, 2 A 13 NOV • 19:00</p>
-                                    <!--parágrafos-->
-                                        <div class="parag">
-                                            <P>consagração da família evangélica de Deus e Jesus Cristo Consagração da família
-                                        </div>
-                                    </div><div class="clear"></div>
-                                </div>
-                                <div class="box-img2">
-                                    <img src=".././icones/imagem/Component14/Vector.png" alt="">
-                                    <!--div de sobreposição-->
-                                        <div class="sobreposição">
-                                        <!--botão-->
-                                            <div class="haga5">
-                                                <h5>Categoria</h5>
-                                            </div>
-                                        <!--icone e horários-->                            
-                                            <i class="fa fa-play" style="color: gray;"></i>
-                                            <p class="horarios">QUA, 2 A 13 NOV • 19:00</p>
-                                        <!--parágrafos-->
-                                            <div class="parag">
-                                                <P>consagração da família evangélica de Deus e Jesus Cristo Consagração da família
-                                            </div>
-                                        </div><div class="clear"></div>
-                                </div>                     
-                            </div> <div class="clear"></div>                
-                    </div>
-                </div> 
-            <!--conteiner 02-->
-                <div class="container02">
-                <!--conteúdo 03-->
-                    <div class="conteúdo03">
-                        <h3>Série de Palavras  </h3>
-                        <div class="line-text line-textS3 "><div></div></div>
-                        <h5> Ver todas as palavras <i class="fa fa-arrow-right"></i></h5>
-                    </div>
-                <!--conteúdo 04-->
-                <div class="conteúdo04">
-                    <!--box img-->
-                        <div class="box-img">
-                            <img src=".././icones/imagem/Component14/Vector.png" alt="">
-                        <!--div de sobreposição-->
-                            <div class="sobreposição">
-                            <!--botão-->
-                                <div class="haga5">
-                                    <h5>Categoria</h5>
-                                </div>
-                            <!--icone e horários-->                            
-                                <i class="fa fa-play" style="color: gray;"></i>
-                                <p class="horarios">QUA, 2 A 13 NOV • 19:00</p>
-                            <!--parágrafos-->
-                                <div class="parag">
-                                    <P>consagração da família evangélica de Deus e Jesus Cristo Consagração da família
-                                </div>
-                            </div><div class="clear"></div>
-                        </div>
-                        <div class="box-img img03">
-                            <img src=".././icones/imagem/Component14/Vector.png" alt="">
-                        <!--div de sobreposição-->
-                            <div class="sobreposição">
-                            <!--botão-->
-                                <div class="haga5">
-                                    <h5>Categoria</h5>
-                                </div>
-                            <!--icone e horários-->                            
-                                <i class="fa fa-play" style="color: gray;"></i>
-                                <p class="horarios">QUA, 2 A 13 NOV • 19:00</p>
-                            <!--parágrafos-->
-                                <div class="parag">
-                                    <P>consagração da família evangélica de Deus e Jesus Cristo Consagração da família
-                                </div>
-                            </div><div class="clear"></div>
-                        </div>
-                        <div class="box-img">
-                            <img src=".././icones/imagem/Component14/Vector.png" alt="">
-                        <!--div de sobreposição-->
-                            <div class="sobreposição">
-                            <!--botão-->
-                                <div class="haga5">
-                                    <h5>Categoria</h5>
-                                </div>
-                            <!--icone e horários-->                            
-                                <i class="fa fa-play" style="color: gray;"></i>
-                                <p class="horarios">QUA, 2 A 13 NOV • 19:00</p>
-                            <!--parágrafos-->
-                                <div class="parag">
-                                    <P>consagração da família evangélica de Deus e Jesus Cristo Consagração da família
-                                </div>
-                            </div><div class="clear"></div>
-                        </div>
-                    </div>    
-                </div><div class="clear"></div>
-        </section> <div class="clear"></div>
-    <!--section contribua-->    
-        <section class="section-contribua">
-            <div class="contribua">
-                <h1>Contribua online</h1>
-                <p>Sua oferta é um ato voluntário, um ato de amor e compromisso com a obra de Deus e a Igreja do Senhor.</p>
-                <button><h4>Ver todas as formas de contribuir</h4></button>
-            </div><div class="clear"></div>
-        </section><div class="clear"></div>
-        <section class="section-notícias">
-        <!--Título e linha-->
-            <!--conteúdo 01-->
-            <div class="conteúdo03">
-                <h3>Palavras  </h3>
-                <div class="line-text line-textS3 "><div></div></div>
-                    <h5> Ver todas as palavras <i class="fa fa-arrow-right"></i></h5>
-                </div>
-            <!--blocos de notícias-->
-                <div class="container-notícias">
-                <!--blocos de notícias-->
-                    <div class="blocos_de_notícias">
-                        <div class="haga5">
-                            <h5>categoria</h5>
-                        </div>
-                             <h4>Grupos aprovados no sistema único de saúde</h4>
-                             <i class="far fa-calendar"></i>
-                             <p>10/05/2021 ás 19h30</p>
-                    </div>
-                    <!--blocos de notícias-->
-                    <div class="blocos_de_notícias">
-                        <div class="haga5">
-                            <h5>categoria</h5>
-                        </div>
-                             <h4>Grupos aprovados no sistema único de saúde</h4>
-                             <i class="far fa-calendar"></i>
-                             <p>10/05/2021 ás 19h30</p>
-                    </div>
-                    <!--blocos de notícias-->
-                    <div class="blocos_de_notícias">
-                        <div class="haga5">
-                            <h5>categoria</h5>
-                        </div>
-                             <h4>Grupos aprovados no sistema único de saúde</h4>
-                             <i class="far fa-calendar"></i>
-                             <p>10/05/2021 ás 19h30</p>
-                    </div>
-                    <!--blocos de notícias-->
-                    <div class="blocos_de_notícias">
-                        <div class="haga5">
-                            <h5>categoria</h5>
-                        </div>
-                             <h4>Grupos aprovados no sistema único de saúde</h4>
-                             <i class="far fa-calendar"></i>
-                             <p>10/05/2021 ás 19h30</p>
-                    </div>
+                }
+                div.box-img1 img{
+                    width:90%;
                     
-                </div>
-                <!--blocos de notícias-->
-                <div class="container-notícias">
-                    <!--blocos de notícias-->
-                        <div class="blocos_de_notícias">
-                            <div class="haga5">
-                                <h5>categoria</h5>
-                            </div>
-                                 <h4>Grupos aprovados no sistema único de saúde</h4>
-                                 <i class="far fa-calendar"></i>
-                                 <p>10/05/2021 ás 19h30</p>
-                        </div>
-                        <!--blocos de notícias-->
-                        <div class="blocos_de_notícias">
-                            <div class="haga5">
-                                <h5>categoria</h5>
-                            </div>
-                                 <h4>Grupos aprovados no sistema único de saúde</h4>
-                                 <i class="far fa-calendar"></i>
-                                 <p>10/05/2021 ás 19h30</p>
-                        </div>
-                        <!--blocos de notícias-->
-                        <div class="blocos_de_notícias">
-                            <div class="haga5">
-                                <h5>categoria</h5>
-                            </div>
-                                 <h4>Grupos aprovados no sistema único de saúde</h4>
-                                 <i class="far fa-calendar"></i>
-                                 <p>10/05/2021 ás 19h30</p>
-                        </div>
-                        <!--blocos de notícias-->
-                        <div class="blocos_de_notícias">
-                            <div class="haga5">
-                                <h5>categoria</h5>
-                            </div>
-                                 <h4>Grupos aprovados no sistema único de saúde</h4>
-                                 <i class="far fa-calendar"></i>
-                                 <p>10/05/2021 ás 19h30</p>
-                        </div>     
-                </div>                 
-            </div><div class="clear"></div>
-            <div class="umdoistres">
-                <span><i class="fas fa-caret-left"></i><span class="aoba">1</span><span>2</span><span>3</span><span>. . .</span><span>50</span><i class="fas fa-caret-right"></i>
-            </div></span>
-        </section>
-        <footer>
-            <div class="container-footer">
-                <div class="icones-sociais cabs">
-                    <i class="fab fa-instagram"></i>
-                    <i class="fab fa-youtube-square"></i>
-                    <i class="fab fa-twitter-square"></i>
-                </div>
-                <div class="icones-sociais">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-spotify"></i>
-                    <i class="fab fa-soundcloud"></i>
-                </div>
-                <div class="footer-info" >
-                    <div class="infos">
-                        <p>
-                            Palavras
-                        </p>
-                        <br>
-                        <p>
-                        Notícias
-                        </p>
-                        <br>
-                        <p>
-                        Planos de Leitura
-                        </p>
-                        <br>
-                        <p>
-                            Dowloads
-                        </p>
-                        <br>
-                    </div>
-                    <div  class="infos">
-                        <p>
-                            Ao vivo
-                        </p>
-                        <br>
-                        <p>
-                        Eventos
-                        </p>
-                        <br>
-                        <p>
-                        Assinaturas
-                        </p>
-                        <br>
-                        <p>
-                            Pedidos de oração
-                        </p>
-                        <br>
-                    </div>
-                    <div class="infos">
-                        <p>
-                            Guia
-                        </p>
-                        <br>
-                        <p>
-                            Currículo
-                        </p>
-                        <br>
-                        <p>
-                            Fale conosco
-                        </p>
-                        <br>
-                        <p>
-                            Onde nos encontrar
-                        </p>
-                        <br>
-                    </div>
-                    <div class="endereço infos">
-                        <p>Rua Otavio da Fonseca, 30, frente - Colunbandê</p>
-                        <p>São Gonçalo - RJ, 24451-240 - Brasil</p>
-                        <p>+55 (22) 2222-2222</p>
-                    </div> <div class="clear"></div>
-                </div>          
-            </div>
-        </footer>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script type="text/javascript" src=".././JavaScript/index.JS"></script>
-    </body>
-</html>
+                }
+                /*sobreposição*/
+                    div.conteúdo-35  div.box-img1 div.sobreposição{
+                        position: absolute;
+                        bottom: 28px;
+                        left: 80px;
+                        text-align: left;
+                    }
+                    /*"botão"*/
+                    div.conteúdo-35 div.box-img1 div.haga5{
+                        height: 32px;
+                        width: 106px;
+                        border: 1px solid white;
+                        border-radius: 80px;                    
+                    }
+                        div.conteúdo-35 div.box-img1 div.haga5:hover{
+                            cursor:pointer;
+                    }
+                    div.conteúdo-35 div.box-img1 div.haga5 h5{
+                        color: white;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 7px;
+                        font-size: 16px;
+                    }
+                /*icone e horários*/
+                    div.conteúdo-35 div.box-img1 i.fa-play{
+                        font-size: 21.33px 24px;
+                        margin-top: 12px;
+                    }
+                    div.conteúdo-35 div.box-img1 p.horarios{
+                        margin-top:-20px;
+                        align-items: center;
+                        margin-left: 56px;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-style: normal;                
+                    }
+                /*parágrafo*/
+                    div.conteúdo-35 div.box-img1 div.parag{
+                        font-size: 14px;
+                        color: white;
+                        font-weight: 700;
+                        line-height: 17,71px;
+                        margin-top: 15px;
+                    }
+        /*box img 2*/
+                div.conteúdo02 div.conteúdo-35 div.box-img2 {
+                    position: relative;
+                    height: 45%;
+                    width: 100%;
+                    text-align: right;
+                }
+                div.box-img2 img{
+                    width:90%;
+
+                }
+                /*sobreposição*/
+                    div.conteúdo-35  div.box-img2 div.sobreposição{
+                        position: absolute;
+                        bottom: 28px;
+                        left: 80px;
+                        text-align: left;
+
+                    }
+                    /*"botão"*/
+                    div.conteúdo-35 div.box-img2 div.haga5{
+                        height: 32px;
+                        width: 106px;
+                        border: 1px solid white;
+                        border-radius: 80px;                    
+                    }
+                        div.conteúdo-35 div.box-img2 div.haga5:hover{
+                            cursor:pointer;
+                    }
+                    div.conteúdo-35 div.box-img2 div.haga5 h5{
+                        color: white;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        align-items: center;
+                        margin-top: 7px;
+                        font-size: 16px;
+                    }
+                /*icone e horários*/
+                    div.conteúdo-35 div.box-img2 i.fa-play{
+                        font-size: 21.33px 24px;
+                        margin-top: 12px;
+                    }
+                    div.conteúdo-35 div.box-img2 p.horarios{
+                        margin-top:-20px;
+                        align-items: center;
+                        margin-left: 56px;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-style: normal;                
+                    }
+                /*parágrafo*/
+                    div.conteúdo-35 div.box-img2 div.parag{
+                        font-size: 14px;
+                        color: white;
+                        margin-top: 14px;
+                        font-weight: 700;
+                        line-height: 17,71px;
+                        margin-top: 15px;
+                    }     
+    /*container 02*/
+        /*conteúdo 03*/
+            div.container02 div.conteúdo03{
+                width: 100%;
+                padding:60px 0;
+                text-align: center;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+            }
+                /*h2 e h5*/
+                    div.conteúdo03 h3 {
+                        font-size: 24px;
+
+                    }
+                    div.conteúdo03 > h5 {
+                        font-style: Bold;
+                        Font-size: 16px;
+                        Line-height: 16px;
+                        Vertical-align: Center;
+                        color:#1E5BDA ;
+                    }
+                /*linha preta*/
+                    div.conteúdo03 div.line-text {
+                            margin:0px 55px 0 27px;
+                            width: 65%;
+                            height:17px;
+                            padding: 0px 0 0px 0;
+                            position: relative;
+                            display: inline-block;
+                            color: black;
+                    }
+                    div.conteúdo03 div.line-text > div{
+                        position: absolute;
+                        margin: 8px 0 0 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background:black;
+                    }
+        /*conteúdo 04*/
+            div.conteúdo04{
+                width: 100%;
+                margin-top:20px;
+                margin-left: 5px;
+                margin: 0 auto;
+                text-align: center;
+                align-items: center;
+
+            }
+            /*box img 1*/
+                div.box-img {
+                    text-align: center;
+                    align-items: center;
+                    position: relative;
+                    width: 31.5%;
+                    text-align: center;
+                    float: left;
+                    
+                    
+                    
+                }
+                div.img03 {
+                    margin:0 20px; 
+                    
+                }
+                    div.box-img img{
+                        width:100%;
+                        
+                    }
+                /*sobreposição*/
+                      div.box-img div.sobreposição{
+                        position: absolute;
+                        bottom: 28px;
+                        left: 30px;
+                        text-align: left;
+                    }
+                    /*"botão"*/
+                        div.box-img div.haga5{
+                            height: 32px;
+                            width: 106px;
+                            border: 1px solid white;
+                            border-radius: 80px;                    
+                        }
+                        div.box-img div.haga5:hover{
+                            cursor:pointer;
+                    }
+                        div.box-img div.haga5 h5{
+                            color: white;
+                            display: flex;
+                            text-align: center;
+                            justify-content: center;
+                            align-items: center;
+                            margin-top: 7px;
+                            font-size: 16px;
+                    }
+                    /*icone e horários*/
+                        div.box-img i.fa-play{
+                            font-size: 21.33px 24px;
+                            margin-top: 12px;
+                        }
+                        div.box-img p.horarios{
+                            margin-top:-20px;
+                            align-items: center;
+                            margin-left: 56px;
+                            color: white;
+                            font-size: 14px;
+                            font-weight: 400;
+                            font-style: normal;                
+                        }
+                    /*parágrafo*/
+                        div.box-img div.parag{
+                            font-size: 14px;
+                            color: white;
+                            font-weight: 700;
+                            line-height: 17,71px;
+                            margin-top: 15px;
+                        }     
+/*seção contribuições*/
+    section.section-contribua{
+        width: 100%;
+        height: 320px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: #1E5BDA;
+        float: left;
+        margin-top: 120px;    ;
+    }   
+        div.contribua{
+            margin-top: 50px;
+        }
+            div.contribua h1{
+                color: white;
+                font-size: 45px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 51px;
+                letter-spacing: 0em;
+                text-align: center;
+            }
+            div.contribua p{
+                padding-top: 50px;
+                color:white;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: center;
+
+            }
+            div.contribua button{
+                height: 63px;
+                width: 340px;
+                border-radius: 8px;
+                padding: 16px;
+                border: none;
+                margin-top:50px;
+            }
+            div.contribua button h4{
+                color:#1E5BDA;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0em;
+                text-align: center;
+                Font-style: Bold;
+                Vertical-align: Center;
+            }
+            div.contribua button h4:hover{
+                cursor: pointer;
+            }
+/*section notícias*/
+section.section-notícias{
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+section.section-notícias div.conteúdo03{
+    width: 100%;
+    margin: 80px 0;
+    display: flex;
+    justify-content: center;
+
+
+
+}
+    /*bloco de notícias*/
+        div.container-notícias{
+            width: 100%;
+            margin-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+          
+        }
+            div.blocos_de_notícias{
+                width:264px;
+                height: 187px;
+                border-radius: 8px;
+                margin: 0 0px;
+                background-color: white;
+                margin-top:20px;
+  
+               
+            }
+            div.blocos_de_notícias .haga5{
+                align-items: center;
+                height: 32px;
+                text-align: center;
+                width: 106px;
+                border: 2px solid #1E5BDA;
+                border-radius: 80px;
+                margin: 8px 0;
+                
+            }
+                div.haga5 h5{
+                    text-align: center;
+                    align-items: center;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                    letter-spacing: 0em;
+                    color: #1E5BDA;
+                    margin-top: 5px;
+                    
+
+
+                }
+            div.blocos_de_notícias h4{
+                align-items: center;
+                justify-content: center;
+                margin : 20px 0 10px 0;
+                text-align: center;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 25px;
+                letter-spacing: 0em;
+                text-align: left;
+                border-bottom: 1px solid rgba(0,0,0,0.5);
+                padding-bottom: 20px;
+            }
+            div.blocos_de_notícias i{
+                font-size: 25px;
+                color: #1E5BDA;
+                display: inline;
+                
+            }
+            div.blocos_de_notícias p{
+                display: inline;
+                margin:  20px 0 20px 5px;
+                padding: 20px 0 20px 0;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+
+            }
+            div.umdoistres {
+                text-align: center;
+                margin-top: 60px;
+=
+            }
+            div.umdoistres .aoba{
+                border-radius: 100px;
+                background-color: #5D5FEF;
+            }
+/*footer*/
+    footer{
+        width: 100%;
+        height: 30%px;
+        background-color: white;
+        margin: 0 auto;
+
+    }footer div.container-footer{
+        max-width: 1440px;
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+    footer div.footer-info{
+        width: 100%;
+        margin-top:50px ;
+        border-top: 1px solid black;
+
+        
+    }
+    div.infos{
+        display: inline-block;
+        margin: 20px 20px;
+
+    }div.infos p {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+
+    }
+    div.endereço{
+        text-align: left;
+        display: inline-block;
+        float: right;
+        
+    }
+    footer div.cabs{
+       padding: 0 12px 0 0 ;
+        
+    }
+    footer div.icones-sociais {
+    text-align: right;    
+}
+    footer div.icones-sociais i{
+        font-size: 27px;
+        color: #1E5BDA;
+        padding:0px 2px ;
+        
+    }
+    .umdoistres {
+        margin-bottom: 80px;;
+    }
+    .umdoistres span{
+        padding: 15px;;
+    }
+    .roxo {
+        background-color: #5D5FEF
+        ;
+        border-radius:100px ;
+    }
+    
+           
+
+
+/*medias queryes*/   
+    /*1280px*/                    
+@media screen and (max-width:1280px){
+        section.section-conteúdo{
+            width: 100%;
+        }
+        /*conteúdo 02*/
+            div.conteúdo02 div.conteúdo-60{
+                float: left;
+                position: relative;
+                width:100%;
+                margin: 0 auto;
+            }
+            /*img's*/
+                div.conteúdo02 div.conteúdo-35{
+                    height: 100%;
+                    width: 100%;
+                    margin-top: 35px;
+                    }
+                    div.conteúdo02 div.conteúdo-35 div.box-img1 {
+                        height: 100%;
+                        width: 48%;
+                        text-align:center;
+                        float: left;
+                        margin: 0 1% 0 1%;
+                
+                    }div.conteúdo02 div.conteúdo-35 div.box-img2 {
+                        height: 100%;
+                        width: 48%;
+                        text-align:center;
+                        float: right;
+                        margin: 0 1% 0 1%;
+                    }
+                    div.conteúdo-35  div.box-img1 div.sobreposição{
+                        left: 40px;
+                    }
+                    div.conteúdo-35  div.box-img2 div.sobreposição{
+                        left: 40px;
+                    }
+                div.box-img1 img{
+                    width:100%;
+                }
+                div.box-img2 img{
+                    width:100%;
+                }
+        /*conteúdo 04*/
+            div.box-img {
+                width: 49%;
+                margin: 0 0.5%;
+            }div.img03{
+                margin:100%;
+                margin: 0;
+            }
+
+            /*bloco de notícias*/
+        div.container-notícias{
+            width: 100%;
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-around;
+          
+        }
+            div.blocos_de_notícias{
+                width:267px;
+                max-width: 1280px;
+                height: 187px;
+                border-radius: 8px;
+                justify-content: space-around;
+                margin:20px 0          
+            }
+        /*menu mobile*/
+        header{
+            height: 35px;
+        }
+            nav.nav1{
+                display: none;
+            }
+            nav.nav2{
+                display: block;
+                }
+
+}
+    /*768px*/
+        @media screen and (max-width:768px){
+            div.conteúdo02 div.conteúdo-60{
+                margin: 0 auto;
+                width: 100%;
+            }
+            div.conteúdo02 div.conteúdo-35{
+                width: 100%;
+                margin-top: 35px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                }
+                div.conteúdo02 div.conteúdo-35 div.box-img1 {
+                    height: 100%;
+                    width: 80%;
+                    float:left;
+                    margin: 0 1% 0 1%;
+            
+                }div.conteúdo02 div.conteúdo-35 div.box-img2 {
+                    height: 100%;
+                    width: 80%;
+                    float:left;
+                    margin: 0 1% 0 1%;
+                }
+                div.conteúdo-35  div.box-img1 div.sobreposição{
+                    left: 10px;
+                }
+                div.conteúdo-35  div.box-img2 div.sobreposição{
+                    left: 10px;
+                }
+            div.box-img1 img{
+                width:100%;
+            }
+            div.box-img2 img{
+                width:100%;
+            }
+            div.box-img1 img , div.box-img2 img{
+                width:100%;
+            }
+            div.conteúdo-35 div.box-img1 div.parag , div.conteúdo-35 div.box-img2 div.parag{
+                font-size: 12px;
+            }
+            div.box-img   {
+                width: 100%;
+            }div.img03{
+                margin: 20px 0;
+
+        }
+        /*bloco de notícias*/
+        div.container-notícias{
+            margin-top: 25px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+          
+        }
+            div.blocos_de_notícias{
+                width:70%; 
+                border-radius: 8px;
+                justify-content: center;
+                text-align: center;
+
+                margin:20px 0;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+    
+    }@media screen and (max-width:440px){
+        div.conteúdo-60 div.parag{
+            font-size: 15px;
+            font-weight: 700px;
+            line-height: 25,3px;
+            color: white;
+            margin-top: 5px;
+        }
+        div.contribua button{
+            height: 58px;
+            width: 230px;
+            border-radius: 8px;
+            padding: 16px;
+            border: none;
+            margin-top:50px;
+        }
+    }
+}
